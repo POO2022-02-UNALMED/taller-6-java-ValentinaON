@@ -1,5 +1,4 @@
 package vehiculos;
-
 import java.util.ArrayList;
 
 public class Fabricante {
@@ -11,6 +10,7 @@ public class Fabricante {
 	public Fabricante(String nombre, Pais pais) {
 		this.nombre = nombre;
 		this.pais = pais;
+		listado.add(this);
 	}
 	
 	public static Fabricante fabricaMayorVentas() {
@@ -22,12 +22,12 @@ public class Fabricante {
 	        }
 		return MayFab;
 	}
-
-	public static ArrayList<Fabricante> getFrabricantes() {
+	
+	public static ArrayList<Fabricante> getListado() {
 		return listado;
 	}
 
-	public static void setFrabricantes(ArrayList<Fabricante> listado) {
+	public static void setListado(ArrayList<Fabricante> listado) {
 		Fabricante.listado = listado;
 	}
 
