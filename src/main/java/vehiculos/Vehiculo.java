@@ -9,7 +9,7 @@ public class Vehiculo {
 	private int peso;
 	private String traccion;
 	private Fabricante fabricante;
-	static int CantidadVehiculos;
+	private static int CantidadVehiculos;
 	
 	public Vehiculo() {
 		Vehiculo.CantidadVehiculos++;
@@ -95,6 +95,14 @@ public class Vehiculo {
 	
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
+	}
+	
+	public static int getCantidadVehiculos() {
+		return CantidadVehiculos;
+	}
+
+	public static void setCantidadVehiculos(int cantidadVehiculos) {
+		CantidadVehiculos = cantidadVehiculos;
 	}
 	
 	
