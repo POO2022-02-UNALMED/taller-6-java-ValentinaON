@@ -15,7 +15,7 @@ public class Pais {
 	public static int paisMasVendedor() {
 		for(String i:paises) {
 			for(String j:paises) {
-				if(j.equals(i)) {
+				if(j==i) {
 					paisesRep.add(contador++);
 					
 				}else{
@@ -26,8 +26,7 @@ public class Pais {
 		int MF=paisesRep.get(0), Aparece=0;
 	        for(int i=0;i<paisesRep.get(i);i++)
 	        {
-	            if(MF<paisesRep.get(i))
-	            {
+	            if(MF<paisesRep.get(i)){
 	                MF=paisesRep.get(i);
 	                Aparece = i;
 	            }
