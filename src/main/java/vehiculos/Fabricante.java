@@ -6,7 +6,7 @@ public class Fabricante {
 	private String nombre;
 	private Pais pais;
 	private int contador;
-	private static ArrayList<Fabricante> fabricantes = new ArrayList<>();
+	private static ArrayList<Fabricante> listado = new ArrayList<>();
 	
 	public Fabricante(String nombre, Pais pais) {
 		this.nombre = nombre;
@@ -14,8 +14,8 @@ public class Fabricante {
 	}
 	
 	public static Fabricante fabricaMayorVentas() {
-		Fabricante MayFab = fabricantes.get(0);
-	        for(Fabricante i : fabricantes){
+		Fabricante MayFab = listado.get(0);
+	        for(Fabricante i : listado){
 	            if(i.contador > MayFab.contador){
 	                MayFab = i;
 	            }
@@ -24,11 +24,11 @@ public class Fabricante {
 	}
 
 	public static ArrayList<Fabricante> getFrabricantes() {
-		return fabricantes;
+		return listado;
 	}
 
-	public static void setFrabricantes(ArrayList<Fabricante> frabricantes) {
-		Fabricante.fabricantes = frabricantes;
+	public static void setFrabricantes(ArrayList<Fabricante> listado) {
+		Fabricante.listado = listado;
 	}
 
 	public String getNombre() {
