@@ -3,8 +3,8 @@ package vehiculos;
 import java.util.ArrayList;
 
 public class Pais {
-	String nombre;
-	int contador = 0;
+	private String nombre;
+	private static int contador = 0;
 	private static ArrayList<String> paises = new ArrayList<String>();
 	private static ArrayList<Integer> paisesRep = new ArrayList<Integer>();
 	
@@ -12,7 +12,7 @@ public class Pais {
 		this.nombre = nombre;
 	}
 	
-	public int paisMasVendedor() {
+	public static int paisMasVendedor() {
 		for(String i:paises) {
 			for(String j:paises) {
 				if(j.equals(i)) {

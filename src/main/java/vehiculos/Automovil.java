@@ -17,12 +17,10 @@ public class Automovil extends Vehiculo{
 		Automovil.vehiculo.add(this);
 	}
 	
-	public static Automovil CrearAutomovil(String placa, String nombre, int precio, int peso, Fabricante fabricante, int puestos) {
-		Automovil automovil = new Automovil(placa,4,100,nombre,precio,peso,"FWD",fabricante,puestos);
-		Automovil.vehiculo.add(automovil);
-		Automovil.automoviles++;
-		return automovil;
-		
+	public Automovil(String placa,String nombre, int precio, int peso, Fabricante fabricante, int puestos) {
+		super(placa,4,100,nombre,precio,peso,"FWD",fabricante);
+		this.puestos = puestos;
+		Automovil.vehiculo.add(this);
 	}
 	
 	public static int cantidadAutomoviles() {

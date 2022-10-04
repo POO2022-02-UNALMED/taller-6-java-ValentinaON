@@ -13,11 +13,10 @@ public class Camion extends Vehiculo{
 		Camion.vehiculo.add(this);
 	}
 	
-	public static Camion CrearCamion(String placa, String nombre, int precio, int peso, Fabricante fabricante, int puestos) {
-		Camion camion = new Camion(placa,2,80,nombre,precio,peso,"4X2",fabricante,puestos);
-		Camion.vehiculo.add(camion);
-		Camion.camiones++;
-		return camion;	
+	public Camion(String placa,String nombre, int precio, int peso, Fabricante fabricante, int ejes){
+		super(placa,2,80,nombre,precio,peso,"4X2",fabricante);
+		this.ejes = ejes;
+		Camion.vehiculo.add(this);
 	}
 	
 	public static int cantidadCamiones() {
