@@ -12,7 +12,7 @@ public class Pais {
 		this.nombre = nombre;
 	}
 	
-	public static int paisMasVendedor() {
+	public static String paisMasVendedor() {
 		for(String i:paises) {
 			for(String j:paises) {
 				if(j==i) {
@@ -31,7 +31,7 @@ public class Pais {
 	                Aparece = i;
 	            }
 	        }
-		return Aparece;
+		return paises.get(Aparece);
 	}
 	
 	public String getNombre() {
